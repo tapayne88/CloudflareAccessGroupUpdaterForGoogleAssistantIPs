@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+NAME=cloudflare-access-group-google-ip-updater
+
+docker build --network=host --tag $NAME .
+docker run --network=host --interactive --tty $NAME "$@"
